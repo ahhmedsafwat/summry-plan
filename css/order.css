@@ -1,0 +1,153 @@
+/* the font family */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/* the global rules  */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+img {
+  max-width: 100%;
+}
+/* the end of global rules  */
+@media only screen and (max-width: 1440px) {
+  .container {
+    width: 400px;
+    height: 650px;
+  }
+  #main {
+    background: url(../image/pattern-background-desktop.svg) no-repeat;
+    /* background-size: cover; */
+    background-color: hsl(225, 100%, 94%);
+  }
+}
+.container {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+}
+#main .text h1 {
+  color: hsl(223, 47%, 23%);
+  text-align: center;
+  padding-top: 10px;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+#main .text p {
+  color: hsl(224, 23%, 55%);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 65px;
+  text-align: center;
+  line-height: 1.9rem;
+}
+#main .summary {
+  display: flex;
+  justify-content: space-around;
+  background-color: hsl(225, 100%, 98%);
+  padding: 20px;
+  align-items: center;
+  width: 340px;
+  margin: auto;
+  border-radius: 20px;
+}
+#main .image {
+  flex: 1 1 25%;
+  justify-content: center;
+  display: flex;
+}
+#main .sulery {
+  flex: 1 2 50%;
+}
+#main .sulery div {
+  display: flex;
+  flex-direction: column;
+  color: hsl(223, 47%, 23%);
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+#main .sulery span {
+  color: hsl(224, 23%, 55%);
+  text-transform: lowercase;
+  padding-top: 5px;
+  font-weight: 500;
+}
+#main .summary a {
+  flex: 1 1 25%;
+  color: hsl(245, 75%, 52%);
+  transition: 0.2s ease;
+  text-transform: capitalize;
+}
+
+#main .summary a:hover {
+  /* color: hsl(224, 23%, 55%); */
+  text-decoration: none;
+  opacity: 0.7;
+}
+#main .submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main button {
+  border: none;
+  background: hsl(245, 75%, 52%);
+  color: white;
+  padding: 15px 90px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 20px;
+  transition: 0.2s;
+}
+#main .submit a {
+  margin: 15px;
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+}
+
+#main button:hover {
+  opacity: 0.8;
+}
+
+#main .submit a:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 375px) {
+  #main {
+    background: url(../image/pattern-background-mobile.svg) no-repeat;
+    background-color: hsl(225, 100%, 94%);
+  }
+  .container {
+    width: 330px;
+    height: 620px;
+  }
+  #main .text p {
+    padding: 10px 30px;
+  }
+  #main .submit button {
+    padding: 15px 60px;
+  }
+  #main .summary {
+    width: 300px;
+  }
+  #main .summary .sulery {
+    margin-left: 10px;
+  }
+}
